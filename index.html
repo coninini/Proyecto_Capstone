@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Proyecto de Título</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    <style>
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            text-transform: none;
+            color: #4DB8FF;
+        }
+
+        .highlight {
+            color: #FF4D4D;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #4DFF4D;
+            font-weight: bold;
+        }
+
+        .tech-icons img {
+            height: 50px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .small-text {
+            font-size: 0.55em;
+            line-height: 1.3;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            margin: 5px;
+            background: #333;
+            border-radius: 20px;
+            font-size: 0.7em;
+            border: 1px solid #4DB8FF;
+        }
+
+        .box {
+            border: 1px solid #555;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stack-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .stack-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h2>Modernización del Sistema de Inventario</h2>
+                <h3>Distribuidora de Artículos de Aseo B2B</h3>
+                <p><small>Propuesta de Proyecto de Título</small></p>
+            </section>
+
+            <section>
+                <h2>1. Contexto Actual de la Empresa</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><strong>Operación Principal:</strong> Distribuidora en el modelo B2B (empresas comprando a
+                            empresas), destacando la atención ágil mediante <strong>WhatsApp</strong>.</li>
+                        <li><strong>Infraestructura Tecnológica:</strong> Cuentan con un sistema de ventas básico (tipo
+                            POS/Cajero) para el registro de transacciones.</li>
+                        <li><strong><span class="highlight">Dolor Crítico:</span></strong> El inventario se gestiona
+                            externamente en <strong>planillas Excel</strong>. El flujo de actualización depende del
+                            ingreso manual de facturas, lo que genera retrasos y quiebres de stock invisibles.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px;">
+                    <span class="role-badge">Tú: Product Owner & QA</span>
+                    <span class="role-badge">Tú: Analista e Ing. Datos</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Capa de Negocio</h2>
+                <div class="box small-text">
+                    <p><em>¿Por qué este proyecto es vital para la empresa hoy?</em></p>
+                    <ul>
+                        <li><strong>Riesgo en Modelo B2B:</strong> Un cliente B2B compra en volumen; fallarle por un
+                            Excel desactualizado significa perder rentabilidad mayor.</li>
+                        <li><strong>Desconexión Digital:</strong> El sistema de ventas actual no "habla" en tiempo real
+                            con el inventario físico.</li>
+                        <li><strong>Oportunidad Estratégica:</strong> La solución implementará gobernanza de datos desde
+                            la base, lo que preparará a la empresa para su <strong><span class="success">modernización
+                                    hacia un E-Commerce B2B automatizado</span></strong> en el futuro.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Stack (Backend y BD)</h2>
+                <div class="box small-text">
+                    <div class="stack-item">
+                        <strong>🐘 PostgreSQL (Base de Datos)</strong>
+                        <p>- <em>Por qué:</em> Garantiza integridad total (Cumplimiento ACID). El dinero y el stock
+                            manejado en inventarios B2B no admite corrupción de datos.</p>
+                        <p>- <em>Cómo:</em> Almacenará relaciones estrictas entre Productos, Usuarios y Transacciones,
+                            siendo la única fuente de la verdad.</p>
+                    </div>
+                    <div class="stack-item">
+                        <strong>🟡 Node.js (Servidor API)</strong>
+                        <p>- <em>Por qué:</em> Su arquitectura no bloqueante es altísimamente escalable para atender a
+                            múltiples vendedores simultáneos.</p>
+                        <p>- <em>Cómo:</em> Actuará como el "cerebro" central (API REST) que recibe peticiones de venta
+                            y aprueba/rechaza según parámetros estables.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Stack (Frontend y QA)</h2>
+                <div class="box small-text">
+                    <div class="stack-item">
+                        <strong>⚛️ React + TypeScript (Interfaz Web)</strong>
+                        <p>- <em>Por qué:</em> React genera fluidez (sin recargar la página) y TS previene bugs humanos
+                            al obligar a tipar los datos entrantes estrictamente.</p>
+                        <p>- <em>Cómo:</em> Construiremos un Dashboard (Panel Web) visual e intuitivo donde los gerentes
+                            visualizarán el stock y los vendedores registrarán las salidas.</p>
+                    </div>
+                    <div class="stack-item">
+                        <strong>🧪 Selenium (QA Automations)</strong>
+                        <p>- <em>Por qué:</em> Validar inventarios a mano tras cada cambio es inviable y peligroso si se
+                            omite un bug.</p>
+                        <p>- <em>Cómo:</em> Programaremos scripts automáticos que simularán ser un trabajador revisando
+                            que el descuento de stock funcione a la perfección en cada módulo, evitando fallas en
+                            Producción.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Gobernanza de Datos</h2>
+                <div class="box small-text">
+                    <p><em>Aplicando la teoría a la base de datos para asegurar el éxito:</em></p>
+                    <ul>
+                        <li><strong>Calidad de Datos (Data Quality):</strong> Reglas a nivel de base de datos que
+                            impiden anomalías (ej. restricciones de "Stock no puede ser negativo").</li>
+                        <li><strong>Fuente Única de Verdad (SSOT):</strong> Erradicar la multiplicidad de "Excels". El
+                            sistema será el único punto de consulta válido para toda la empresa.</li>
+                        <li><strong>Trazabilidad Vital:</strong> Cada movimiento u operación debe registrar el usuario,
+                            la hora y el documento contable asociado (Auditoría).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>6. Seguridad de la Información</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><strong>Control de Acceso (RBAC):</strong> Separación estricta de roles. Un cajero realiza
+                            ventas; solo un Product Owner/Admin ajusta stock directamente.</li>
+                        <li><strong>Protección de Credenciales:</strong> Hasheo asimétrico de contraseñas de usuarios.
+                        </li>
+                        <li><strong>Prevención de Inyecciones:</strong> Uso estricto de consultas parametrizadas en la
+                            BD para evitar ataques SQL Injection.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>7. Marco Legal (Compliance Chile)</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><strong>Ley 21.719 (Delitos Económicos):</strong> Un sistema auditable y cerrado previene
+                            manipulaciones fraudulentas de inventario empresarial (mitigando riesgos gerenciales).</li>
+                        <li><strong>Ley 21.663 (Ciberseguridad Interempresarial):</strong> El proyecto adopta bases de
+                            seguridad (RBAC) alineadas con la preservación y continuidad operacional de la empresa.</li>
+                        <li><strong>Privacidad (Ley 19.628):</strong> Resguardo seguro de los datos de contacto y compra
+                            de los clientes obtenidos por WhatsApp.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Fin de la Propuesta</h2>
+                <p><small>¿Consultas o Dudas?</small></p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+
+</html>
