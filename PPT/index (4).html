@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Proyecto de Título</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    <style>
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            text-transform: none;
+            color: #4DB8FF;
+        }
+
+        .highlight {
+            color: #FF4D4D;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #4DFF4D;
+            font-weight: bold;
+        }
+
+        .tech-icons img {
+            height: 50px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .small-text {
+            font-size: 0.55em;
+            line-height: 1.3;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            margin: 5px;
+            background: #333;
+            border-radius: 20px;
+            font-size: 0.7em;
+            border: 1px solid #4DB8FF;
+        }
+
+        .box {
+            border: 1px solid #555;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stack-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .stack-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>SICD</h1>
+                <h2>Modernización del Sistema de Inventario</h2>
+                <h3>Distribuidora de Artículos de Aseo B2B</h3>
+                <p><small>Propuesta de Proyecto de Título</small></p>
+            </section>
+
+            <section>
+                <h2>1. Contexto Actual de la Empresa Pinval</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Empresa dedicada a la venta de artículos de aseo.</li>
+                        <li>Funciona como intermediario entre proveedores y negocios.</li>
+                        <li>Cuenta con sistema de ventas (POS) para facturación.</li>
+                        <li>Gestión de inventario realizada mediante planillas Excel.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>1.1. Problemática Principal</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="highlight">Dependencia manual:</span> Uso exclusivo de Excel para controlar
+                            ingresos, salidas y stock del inventario.</li>
+                        <li><span class="highlight">Desfase de información:</span> Inconsistencia y retraso entre las
+                            ventas del sistema POS y el stock real en bodega.</li>
+                        <li><span class="highlight">Riesgo de errores:</span> Alta probabilidad de errores humanos al
+                            registrar productos.</li>
+                        <li><span class="highlight">Impacto:</span> Pérdida de eficiencia operativa en la toma de
+                            decisiones por falta de datos en tiempo real.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>1.2. Nuestro Perfil: ¿Por qué fuimos contratados?</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Auditoría Tecnológica:</span> Identificar y subsanar las
+                            vulnerabilidades del actual proceso manual de inventario.</li>
+                        <li><span class="success">Modernización:</span> Reemplazar el uso de planillas estáticas por un
+                            <strong>sistema web centralizado y seguro</strong>.
+                        </li>
+                        <li><span class="success">Desarrollo a Medida:</span> Proveer una herramienta diseñada
+                            específicamente para las reglas operativas (B2B) de Pinval.</li>
+                        <li><span class="success">Gobernanza y Calidad:</span> Garantizar que cada entrada, salida y
+                            ajuste de stock cuente con respaldo en tiempo real.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Capa de Negocio</h2>
+                <div class="box small-text">
+                    <p><em>¿Por qué este proyecto es vital para la empresa hoy?</em></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>2.1. Modelo de Negocio</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Venta de productos de aseo.</li>
+                        <li>Relación con proveedores (compra de productos).</li>
+                        <li>Distribución a clientes finales y empresas.</li>
+                        <li>Principal fuente de ingresos: ventas B2B.</li>
+                        <li>Canales de venta: Whatsapp.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>2.2. Proceso de Negocio (AS-IS)</h2>
+                <div class="box small-text"
+                    style="display: flex; align-items: center; justify-content: space-around; gap: 20px;">
+                    <ul style="text-align: left; flex: 1;">
+                        <li>Compra de productos a proveedores.</li>
+                        <li>Almacenamiento de productos.</li>
+                        <li>Registro de ventas en sistema POS.</li>
+                        <li>Actualización de inventario en Excel.</li>
+                        <li>Entrega de productos a clientes.</li>
+                    </ul>
+                    <img src="img/as_is.drawio.png" alt="Flujo AS IS"
+                        style="max-height: 350px; max-width: 50%; object-fit: contain; border-radius: 8px; background-color: rgba(255,255,255,0.05); padding: 5px;">
+                </div>
+            </section>
+
+            <section>
+                <h2>2.3. Necesidades</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Mejor control del inventario.</li>
+                        <li>Información centralizada y actualizada.</li>
+                        <li>Reducción de errores en el manejo de datos.</li>
+                        <li>Mayor eficiencia en los procesos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>2.4. Riesgos</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Errores en el control de stock.</li>
+                        <li>Información desactualizada.</li>
+                        <li>Dependencia de procesos manuales.</li>
+                        <li>Pérdida o inconsistencia de datos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>2.5. Oportunidad de Mejora</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Implementación de un sistema de inventario.</li>
+                        <li>Integración de datos de ventas e inventario.</li>
+                        <li>Automatización de procesos.</li>
+                        <li>Mejora en la gestión y control de la información</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Propuesta</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Desarrollo de un sistema de gestión de inventario para la empresa Pinval.</li>
+                        <li>Integración de interfaz de usuario, lógica de negocio y base de datos.</li>
+                        <li>Centralización de la información del inventario en un solo sistema.</li>
+                        <li>Reemplazo del uso de planillas Excel como herramienta principal.</li>
+                        <li>Mejora en el control, registro y consulta de productos.</li>
+                        <li>Reducción de errores y dependencia de procesos manuales.</li>
+                        <li>Base escalable para futuras mejoras del sistema.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Flujo TO-BE (Proceso Propuesto)</h2>
+                <div class="box small-text" style="text-align: center;">
+                    <p>Integración y Automatización del Inventario</p>
+                    <!-- REEMPLAZA EL CONTENIDO DE 'src' CON LA RUTA DE TU IMAGEN -->
+                    <!-- EJEMPLO: src="assets/flujo-to-be.png" -->
+                    <img src="https://via.placeholder.com/800x400?text=Inserta+aqui+la+imagen+del+Flujo+TO-BE"
+                        alt="Flujo TO BE"
+                        style="max-height: 400px; border-radius: 8px; margin-top: 15px; border: 2px solid #4DB8FF;">
+                </div>
+            </section>
+
+            <section>
+                <h2>3.1. Impacto en Productividad</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Ahorro de Tiempo:</span> Eliminación de la digitación manual y del
+                            doble trabajo (o retrabajo) en planillas Excel.</li>
+                        <li><span class="success">Decisiones Ágiles:</span> Información de stock consolidada y accesible
+                            en tiempo real para la gerencia.</li>
+                        <li><span class="success">Reducción de Pérdidas:</span> Trazabilidad estricta que evita el
+                            extravío o falta de cuadratura del inventario.</li>
+                        <li><span class="success">Enfoque en el Core (Ventas):</span> El equipo invierte menos horas
+                            cuadrando números y dedica más tiempo a gestionar clientes B2B.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.2. Propuesta de Roles</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Product Owner: Jorge Manriquez .</li>
+                        <li>Analista de Base de Datos: Santiago Mora</li>
+                        <li>Ingeniero Gobernanza de Datos: Constanza Arce</li>
+                        <li>Ingeniero QA: Josue Campusano</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Marco Legal (Compliance Chile)</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Cumplimiento de normativas sobre protección de datos.</li>
+                        Consideración de leyes chilenas:
+                        <li><strong>Ley 21.719:</strong> Regula la protección de los datos personales, estableciendo
+                            cómo deben ser recolectados, almacenados y utilizados, asegurando la privacidad de las
+                            personas.</li>
+                        <li><strong>Ley 21.663:</strong> Establece obligaciones relacionadas con la seguridad de la
+                            información y la responsabilidad en el uso de datos, promoviendo buenas prácticas en su
+                            manejo.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.1. Políticas de Datos</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Definición de reglas para el uso de la información.</li>
+                        <li>Control de acceso a los datos.</li>
+                        <li>Registro y actualización correcta de la información.</li>
+                        <li>Uso adecuado de los datos dentro del sistema.</li>
+                        <li>El sistema será la fuente principal de inventario.</li>
+                        <li>El uso de excel pasa a ser herramienta secundaria.</li>
+                        <li>Toda modificación debe registrarse.</li>
+                        <li>Acceso restringido por roles. (Admin, Usuario)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.2. Calidad de Datos</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Datos completos y actualizados.</li>
+                        <li>Reducción de errores en el registro.</li>
+                        <li>Consistencia en la información.</li>
+                        <li>Validación de datos ingresados al sistema.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.3. Seguridad de la Información</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li>Protección de datos del sistema.</li>
+                        <li>Control de acceso a la información.</li>
+                        <li>Respaldo de datos (backup).</li>
+                        <li>Prevención de pérdida o modificación indebida.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.4. Consideraciones Éticas</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Transparencia:</span> Los cálculos de stock y reportes financieros
+                            deben reflejar 100% la realidad del negocio, sin ocultar mermas.</li>
+                        <li><span class="success">Confidencialidad:</span> Compromiso absoluto de proteger la estrategia
+                            de precios y la base de datos de los clientes (B2B).</li>
+                        <li><span class="success">Inclusión Digital:</span> Diseño de una interfaz amigable que asegure
+                            que ningún operario quede excluido por tener menor experiencia tecnológica.</li>
+                        <li><span class="success">Uso Ético de la Información:</span> Evitar el uso de métricas de
+                            rendimiento para generar presiones laborales desleales, enfocándose en la eficiencia
+                            operativa.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Propuesta de Herramientas (Backend y BD)</h2>
+                <div class="box small-text">
+                    <div class="stack-item">
+                        <strong>🐘 PostgreSQL (Base de Datos)</strong>
+                        <p>- <em>Por qué:</em> Garantiza integridad total (Cumplimiento ACID/Atomicity, Consistency,
+                            Isolation, Durability). El dinero y el stock
+                            manejado en inventarios B2B no admite corrupción de datos.</p>
+                        <p>- <em>Cómo:</em> Almacenará relaciones estrictas entre Productos, Usuarios y Transacciones.
+                        </p>
+                    </div>
+                    <div class="stack-item">
+                        <strong>🟡 Node.js (Servidor API)</strong>
+                        <p>- <em>Por qué:</em> Su arquitectura de carga de datos amplia permite una gestión del
+                            Inventario de forma efectiva y rápida para conexiones remotas.</p>
+                        <p>- <em>Cómo:</em> Será el sistema central (API REST/Representational State Transfer) que
+                            recibe la información del
+                            Inventario ingresada y la procesa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>6. Propuesta de Herramientas (Frontend y QA)</h2>
+                <div class="box small-text">
+                    <div class="stack-item">
+                        <strong>⚛️ React + TypeScript (Interfaz Web)</strong>
+                        <p>- <em>Por qué:</em> React genera fluidez web, y TS previene errores silenciosos al obligar a
+                            tipar los datos
+                            entrantes estrictamente desde el navegador.</p>
+                        <p>- <em>Cómo:</em> Se construirá un Dashboard (Panel Web) visual e intuitivo donde los gerentes
+                            visualizarán el inventario desde cualquier lugar.</p>
+                    </div>
+                    <div class="stack-item">
+                        <strong>🧪 Selenium (QA Automations)</strong>
+                        <p>- <em>Por qué:</em> Validar inventarios manualmente tras cada cambio es inviable y peligroso
+                            de forma remota.</p>
+                        <p>- <em>Cómo:</em> Se programarán scripts automáticos que simularán interacciones, revisando
+                            que el descuento de stock funcione a la perfección en la nube.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Fin de la Propuesta</h2>
+                <p><small>¿Consultas o Dudas?</small></p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+
+</html>
