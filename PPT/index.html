@@ -115,7 +115,8 @@
                         <li><span class="success">Auditoría Tecnológica:</span> Identificar y subsanar las
                             vulnerabilidades del actual proceso manual de inventario.</li>
                         <li><span class="success">Modernización:</span> Reemplazar el uso de planillas estáticas por un
-                            <strong>sistema web centralizado y seguro</strong>.</li>
+                            <strong>sistema web centralizado y seguro</strong>.
+                        </li>
                         <li><span class="success">Desarrollo a Medida:</span> Proveer una herramienta diseñada
                             específicamente para las reglas operativas (B2B) de Pinval.</li>
                         <li><span class="success">Gobernanza y Calidad:</span> Garantizar que cada entrada, salida y
@@ -215,11 +216,9 @@
                 <h2>Flujo TO-BE (Proceso Propuesto)</h2>
                 <div class="box small-text" style="text-align: center;">
                     <p>Integración y Automatización del Inventario</p>
-                    <!-- REEMPLAZA EL CONTENIDO DE 'src' CON LA RUTA DE TU IMAGEN -->
-                    <!-- EJEMPLO: src="assets/flujo-to-be.png" -->
-                    <img src="https://via.placeholder.com/800x400?text=Inserta+aqui+la+imagen+del+Flujo+TO-BE"
+                    <img src="img/to-be.drawio.png"
                         alt="Flujo TO BE"
-                        style="max-height: 400px; border-radius: 8px; margin-top: 15px; border: 2px solid #4DB8FF;">
+                        style="max-height: 450px; max-width: 90%; object-fit: contain; border-radius: 8px; background-color: rgba(255,255,255,0.05); padding: 5px; margin-top: 15px; border: 2px solid #4DB8FF;">
                 </div>
             </section>
 
@@ -328,18 +327,19 @@
                 <h2>5. Propuesta de Herramientas (Backend y BD)</h2>
                 <div class="box small-text">
                     <div class="stack-item">
-                        <strong>🐘 PostgreSQL (Base de Datos)</strong>
-                        <p>- <em>Por qué:</em> Garantiza integridad total (Cumplimiento ACID). El dinero y el stock
-                            manejado en inventarios B2B no admite corrupción de datos.</p>
-                        <p>- <em>Cómo:</em> Almacenará relaciones estrictas entre Productos, Usuarios y Transacciones.
-                        </p>
+                        <strong>PostgreSQL (Base de Datos)</strong>
+                        <p>- <strong>¿Por qué la elegimos?:</strong> Garantiza integridad transaccional (Cumplimiento ACID). Es fundamental
+                            para asegurar la consistencia del catálogo de productos y la precisión del stock en el
+                            modelo B2B.</p>
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Almacenará e interrelacionará de manera estructurada los productos,
+                            usuarios, proveedores y movimientos de inventario.</p>
                     </div>
                     <div class="stack-item">
-                        <strong>🟡 Node.js (Servidor API)</strong>
-                        <p>- <em>Por qué:</em> Su arquitectura de carga de datos amplia permite una gestión del
-                            Inventario de forma efectiva y rápida para conexiones remotas.</p>
-                        <p>- <em>Cómo:</em> Actuará como el "cerebro" central (API REST) que recibe la información del
-                            Inventario ingresada y la procesa.</p>
+                        <strong>Node.js (Servidor API)</strong>
+                        <p>- <strong>¿Por qué la elegimos?:</strong> Su arquitectura asíncrona y orientada a eventos permite procesar
+                            múltiples solicitudes simultáneas de manera eficiente y escalable.</p>
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Proveerá una API REST que centralizará la lógica de negocio, gestionando la
+                            comunicación entre la interfaz web y la base de datos.</p>
                     </div>
                 </div>
             </section>
@@ -348,19 +348,19 @@
                 <h2>6. Propuesta de Herramientas (Frontend y QA)</h2>
                 <div class="box small-text">
                     <div class="stack-item">
-                        <strong>⚛️ React + TypeScript (Interfaz Web)</strong>
-                        <p>- <em>Por qué:</em> React genera fluidez web, y TS previene errores silenciosos al obligar a
-                            tipar los datos
-                            entrantes estrictamente desde el navegador.</p>
-                        <p>- <em>Cómo:</em> Se construirá un Dashboard (Panel Web) visual e intuitivo donde los gerentes
-                            visualizarán el inventario desde cualquier lugar.</p>
+                        <strong>React + TypeScript (Interfaz Web)</strong>
+                        <p>- <strong>¿Por qué la elegimos?:</strong> React permite desarrollar interfaces dinámicas y modulares (SPA),
+                            mientras que TypeScript previene posibles fallos al incorporar tipado estricto en el
+                            desarrollo.</p>
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se implementará un panel de administración (Dashboard) interactivo y
+                            responsivo para gestionar el inventario y visualizar reportes.</p>
                     </div>
                     <div class="stack-item">
-                        <strong>🧪 Selenium (QA Automations)</strong>
-                        <p>- <em>Por qué:</em> Validar inventarios manualmente tras cada cambio es inviable y peligroso
-                            de forma remota.</p>
-                        <p>- <em>Cómo:</em> Se programarán scripts automáticos que simularán interacciones, revisando
-                            que el descuento de stock funcione a la perfección en la nube.</p>
+                        <strong>Selenium (QA - Automatización de Pruebas)</strong>
+                        <p>- <strong>¿Por qué la elegimos?:</strong> La validación manual continua de un sistema en producción es propensa a
+                            errores e ineficiente a nivel de costos y tiempo.</p>
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se desarrollarán scripts de pruebas automatizadas para validar los flujos
+                            críticos, como el alta de productos y la actualización correcta del stock.</p>
                     </div>
                 </div>
             </section>
