@@ -112,8 +112,6 @@
                 <h2>1.2. Nuestro Perfil: ¿Por qué fuimos contratados?</h2>
                 <div class="box small-text">
                     <ul>
-                        <li><span class="success">Auditoría Tecnológica:</span> Identificar y subsanar las
-                            vulnerabilidades del actual proceso manual de inventario.</li>
                         <li><span class="success">Modernización:</span> Reemplazar el uso de planillas estáticas por un
                             <strong>sistema web centralizado y seguro</strong>.
                         </li>
@@ -201,13 +199,17 @@
                 <h2>3. Propuesta</h2>
                 <div class="box small-text">
                     <ul>
-                        <li>Desarrollo de un sistema de gestión de inventario para la empresa Pinval.</li>
-                        <li>Integración de interfaz de usuario, lógica de negocio y base de datos.</li>
-                        <li>Centralización de la información del inventario en un solo sistema.</li>
-                        <li>Reemplazo del uso de planillas Excel como herramienta principal.</li>
-                        <li>Mejora en el control, registro y consulta de productos.</li>
-                        <li>Reducción de errores y dependencia de procesos manuales.</li>
-                        <li>Base escalable para futuras mejoras del sistema.</li>
+                        <li>Implementación de un <strong>sistema de inventario centralizado (cloud)</strong> orientando
+                            al control de productos, ventas y stock en tiempo real.</li>
+                        <li>Desarrollo de una <strong>interfaz web (Dashboard)</strong> para la consulta y gestión
+                            eficiente por parte del equipo de PINVAL.</li>
+                        <li>Automatización en la recepción de <strong>pedidos vía WhatsApp</strong>, incluyendo
+                            validación automática de stock y confirmación.</li>
+                        <li>Trazabilidad completa: desde el <strong>registro de ventas</strong> hasta la actualización
+                            de stock, preparación del pedido y entrega final.</li>
+                        <li>Uso de tecnologías modernas (<strong>React, Node.js, PostgreSQL</strong>)
+                        <li>Reemplazo definitivo del uso de planillas Excel para eliminar el desfase de información y
+                            los errores humanos.</li>
                     </ul>
                 </div>
             </section>
@@ -216,8 +218,7 @@
                 <h2>Flujo TO-BE (Proceso Propuesto)</h2>
                 <div class="box small-text" style="text-align: center;">
                     <p>Integración y Automatización del Inventario</p>
-                    <img src="img/to-be.drawio.png"
-                        alt="Flujo TO BE"
+                    <img src="img/tobe-Copy%20of%20Page-1.drawio.png" alt="Flujo TO BE"
                         style="max-height: 450px; max-width: 90%; object-fit: contain; border-radius: 8px; background-color: rgba(255,255,255,0.05); padding: 5px; margin-top: 15px; border: 2px solid #4DB8FF;">
                 </div>
             </section>
@@ -311,10 +312,10 @@
                 <div class="box small-text">
                     <ul>
                         <li><span class="success">Transparencia:</span> Los cálculos de stock y reportes financieros
-                            deben reflejar 100% la realidad del negocio, sin ocultar mermas.</li>
+                            deben reflejar 100% la realidad del negocio.</li>
                         <li><span class="success">Confidencialidad:</span> Compromiso absoluto de proteger la estrategia
                             de precios y la base de datos de los clientes (B2B).</li>
-                        <li><span class="success">Inclusión Digital:</span> Diseño de una interfaz amigable que asegure
+                        <li><span class="success">Inclusión Digital:</span> Diseño de una interfaz intuitiva que asegure
                             que ningún operario quede excluido por tener menor experiencia tecnológica.</li>
                         <li><span class="success">Uso Ético de la Información:</span> Evitar el uso de métricas de
                             rendimiento para generar presiones laborales desleales, enfocándose en la eficiencia
@@ -328,17 +329,21 @@
                 <div class="box small-text">
                     <div class="stack-item">
                         <strong>PostgreSQL (Base de Datos)</strong>
-                        <p>- <strong>¿Por qué la elegimos?:</strong> Garantiza integridad transaccional (Cumplimiento ACID). Es fundamental
+                        <p>- <strong>¿Por qué la elegimos?:</strong> Garantiza integridad transaccional (Cumplimiento
+                            ACID). Es fundamental
                             para asegurar la consistencia del catálogo de productos y la precisión del stock en el
                             modelo B2B.</p>
-                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Almacenará e interrelacionará de manera estructurada los productos,
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Almacenará e interrelacionará de manera
+                            estructurada los productos,
                             usuarios, proveedores y movimientos de inventario.</p>
                     </div>
                     <div class="stack-item">
                         <strong>Node.js (Servidor API)</strong>
-                        <p>- <strong>¿Por qué la elegimos?:</strong> Su arquitectura asíncrona y orientada a eventos permite procesar
+                        <p>- <strong>¿Por qué la elegimos?:</strong> Su arquitectura asíncrona y orientada a eventos
+                            permite procesar
                             múltiples solicitudes simultáneas de manera eficiente y escalable.</p>
-                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Proveerá una API REST que centralizará la lógica de negocio, gestionando la
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Proveerá una API REST que centralizará la lógica
+                            de negocio, gestionando la
                             comunicación entre la interfaz web y la base de datos.</p>
                     </div>
                 </div>
@@ -349,17 +354,21 @@
                 <div class="box small-text">
                     <div class="stack-item">
                         <strong>React + TypeScript (Interfaz Web)</strong>
-                        <p>- <strong>¿Por qué la elegimos?:</strong> React permite desarrollar interfaces dinámicas y modulares (SPA),
+                        <p>- <strong>¿Por qué la elegimos?:</strong> React permite desarrollar interfaces dinámicas y
+                            modulares (SPA),
                             mientras que TypeScript previene posibles fallos al incorporar tipado estricto en el
                             desarrollo.</p>
-                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se implementará un panel de administración (Dashboard) interactivo y
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se implementará un panel de administración
+                            (Dashboard) interactivo y
                             responsivo para gestionar el inventario y visualizar reportes.</p>
                     </div>
                     <div class="stack-item">
                         <strong>Selenium (QA - Automatización de Pruebas)</strong>
-                        <p>- <strong>¿Por qué la elegimos?:</strong> La validación manual continua de un sistema en producción es propensa a
+                        <p>- <strong>¿Por qué la elegimos?:</strong> La validación manual continua de un sistema en
+                            producción es propensa a
                             errores e ineficiente a nivel de costos y tiempo.</p>
-                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se desarrollarán scripts de pruebas automatizadas para validar los flujos
+                        <p>- <strong>¿Cómo la utilizaremos?:</strong> Se desarrollarán scripts de pruebas automatizadas
+                            para validar los flujos
                             críticos, como el alta de productos y la actualización correcta del stock.</p>
                     </div>
                 </div>
