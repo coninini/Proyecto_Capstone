@@ -115,7 +115,46 @@
             </section>
 
             <section>
-                <h2>3. Stack (Backend y BD)</h2>
+                <h2>3. Diagrama AS-IS (Proceso Actual)</h2>
+                <div class="box small-text">
+                    <p><em>Flujo de trabajo sin el sistema propuesto (Problema)</em></p>
+                    <ul style="list-style-type: none;">
+                        <li>🧍 <strong>Vendedores:</strong> Reciben y preparan nota de pedido externa.</li>
+                        <li>💻 <strong>Caja de Ventas:</strong> Procesa el documento final localmente.</li>
+                        <li>📊 <strong>Gestión:</strong> Actualiza stock tarde en Excel revisando boletas a ciegas.</li>
+                        <li><span class="highlight">⚠️ Consecuencia:</span> Quiebres de stock imprevisibles y
+                            desincronización B2B.</li>
+                    </ul>
+                    <!-- Espacio sugerido para tu diagrama visual de la arquitectura actual -->
+                    <div
+                        style="margin-top:20px; border: 1px dashed #555; padding: 20px; color: #888; text-align: center;">
+                        [Imagen del Diagrama AS-IS]
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Diagrama TO-BE (Proceso Propuesto)</h2>
+                <div class="box small-text">
+                    <p><em>Flujo de trabajo optimizado (Solución)</em></p>
+                    <ul style="list-style-type: none;">
+                        <li>🧍 <strong>Vendedores:</strong> Consultan disponibilidad por el Dashboard Web.</li>
+                        <li>⚡ <strong>API Central:</strong> Valida disponibilidad interactuando dinámicamente con
+                            PostgreSQL.</li>
+                        <li>💻 <strong>Sistema Integral:</strong> Reserva el inventario y mantiene la verdad única.</li>
+                        <li><span class="success">✅ Resultado:</span> Stock en tiempo real, trazabilidad para auditoría
+                            y eficiencia asegurada.</li>
+                    </ul>
+                    <!-- Espacio sugerido para tu diagrama visual de la arquitectura final -->
+                    <div
+                        style="margin-top:20px; border: 1px dashed #555; padding: 20px; color: #888; text-align: center;">
+                        [Imagen del Diagrama TO-BE]
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Stack (Backend y BD)</h2>
                 <div class="box small-text">
                     <div class="stack-item">
                         <strong>🐘 PostgreSQL (Base de Datos)</strong>
@@ -135,7 +174,7 @@
             </section>
 
             <section>
-                <h2>4. Stack (Frontend y QA)</h2>
+                <h2>6. Stack (Frontend y QA)</h2>
                 <div class="box small-text">
                     <div class="stack-item">
                         <strong>⚛️ React + TypeScript (Interfaz Web)</strong>
@@ -156,7 +195,7 @@
             </section>
 
             <section>
-                <h2>5. Gobernanza de Datos</h2>
+                <h2>7. Gobernanza de Datos</h2>
                 <div class="box small-text">
                     <p><em>Aplicando la teoría a la base de datos para asegurar el éxito:</em></p>
                     <ul>
@@ -171,7 +210,7 @@
             </section>
 
             <section>
-                <h2>6. Seguridad de la Información</h2>
+                <h2>8. Seguridad de la Información</h2>
                 <div class="box small-text">
                     <ul>
                         <li><strong>Control de Acceso (RBAC):</strong> Separación estricta de roles. Un cajero realiza
@@ -185,7 +224,7 @@
             </section>
 
             <section>
-                <h2>7. Marco Legal (Compliance Chile)</h2>
+                <h2>9. Marco Legal (Compliance Chile)</h2>
                 <div class="box small-text">
                     <ul>
                         <li><strong>Ley 21.719 (Delitos Económicos):</strong> Un sistema auditable y cerrado previene
@@ -194,6 +233,20 @@
                             seguridad (RBAC) alineadas con la preservación y continuidad operacional de la empresa.</li>
                         <li><strong>Privacidad (Ley 19.628):</strong> Resguardo seguro de los datos de contacto y compra
                             de los clientes obtenidos por WhatsApp.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>10. Consideraciones Éticas</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><strong>Integridad y Transparencia:</strong> Asegurar que el sistema impida la manipulación
+                            de datos para ocultar información financiera o de inventario.</li>
+                        <li><strong>Responsabilidad Profesional:</strong> Garantizar la calidad del software entregado
+                            mediante pruebas rigurosas, evitando fallos que perjudiquen la operación.</li>
+                        <li><strong>Confidencialidad:</strong> Tratar los datos de los clientes B2B con el máximo
+                            resguardo, usándolos estrictamente para los fines comerciales acordados.</li>
                     </ul>
                 </div>
             </section>

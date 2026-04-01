@@ -93,6 +93,38 @@
             </section>
 
             <section>
+                <h2>1.1. Problemática Principal</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="highlight">Dependencia manual:</span> Uso exclusivo de Excel para controlar
+                            ingresos, salidas y stock del inventario.</li>
+                        <li><span class="highlight">Desfase de información:</span> Inconsistencia y retraso entre las
+                            ventas del sistema POS y el stock real en bodega.</li>
+                        <li><span class="highlight">Riesgo de errores:</span> Alta probabilidad de errores humanos al
+                            registrar productos.</li>
+                        <li><span class="highlight">Impacto:</span> Pérdida de eficiencia operativa en la toma de
+                            decisiones por falta de datos en tiempo real.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>1.2. Nuestro Perfil: ¿Por qué fuimos contratados?</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Auditoría Tecnológica:</span> Identificar y subsanar las
+                            vulnerabilidades del actual proceso manual de inventario.</li>
+                        <li><span class="success">Modernización:</span> Reemplazar el uso de planillas estáticas por un
+                            <strong>sistema web centralizado y seguro</strong>.</li>
+                        <li><span class="success">Desarrollo a Medida:</span> Proveer una herramienta diseñada
+                            específicamente para las reglas operativas (B2B) de Pinval.</li>
+                        <li><span class="success">Gobernanza y Calidad:</span> Garantizar que cada entrada, salida y
+                            ajuste de stock cuente con respaldo en tiempo real.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
                 <h2>2. Capa de Negocio</h2>
                 <div class="box small-text">
                     <p><em>¿Por qué este proyecto es vital para la empresa hoy?</em></p>
@@ -113,15 +145,18 @@
             </section>
 
             <section>
-                <h2>2.2. Proceso de Negocio</h2>
-                <div class="box small-text">
-                    <ul>
+                <h2>2.2. Proceso de Negocio (AS-IS)</h2>
+                <div class="box small-text"
+                    style="display: flex; align-items: center; justify-content: space-around; gap: 20px;">
+                    <ul style="text-align: left; flex: 1;">
                         <li>Compra de productos a proveedores.</li>
                         <li>Almacenamiento de productos.</li>
                         <li>Registro de ventas en sistema POS.</li>
                         <li>Actualización de inventario en Excel.</li>
                         <li>Entrega de productos a clientes.</li>
                     </ul>
+                    <img src="img/as_is.drawio.png" alt="Flujo AS IS"
+                        style="max-height: 350px; max-width: 50%; object-fit: contain; border-radius: 8px; background-color: rgba(255,255,255,0.05); padding: 5px;">
                 </div>
             </section>
 
@@ -177,7 +212,35 @@
             </section>
 
             <section>
-                <h2>3.1. Propuesta de Roles</h2>
+                <h2>Flujo TO-BE (Proceso Propuesto)</h2>
+                <div class="box small-text" style="text-align: center;">
+                    <p>Integración y Automatización del Inventario</p>
+                    <!-- REEMPLAZA EL CONTENIDO DE 'src' CON LA RUTA DE TU IMAGEN -->
+                    <!-- EJEMPLO: src="assets/flujo-to-be.png" -->
+                    <img src="https://via.placeholder.com/800x400?text=Inserta+aqui+la+imagen+del+Flujo+TO-BE"
+                        alt="Flujo TO BE"
+                        style="max-height: 400px; border-radius: 8px; margin-top: 15px; border: 2px solid #4DB8FF;">
+                </div>
+            </section>
+
+            <section>
+                <h2>3.1. Impacto en Productividad</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Ahorro de Tiempo:</span> Eliminación de la digitación manual y del
+                            doble trabajo (o retrabajo) en planillas Excel.</li>
+                        <li><span class="success">Decisiones Ágiles:</span> Información de stock consolidada y accesible
+                            en tiempo real para la gerencia.</li>
+                        <li><span class="success">Reducción de Pérdidas:</span> Trazabilidad estricta que evita el
+                            extravío o falta de cuadratura del inventario.</li>
+                        <li><span class="success">Enfoque en el Core (Ventas):</span> El equipo invierte menos horas
+                            cuadrando números y dedica más tiempo a gestionar clientes B2B.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.2. Propuesta de Roles</h2>
                 <div class="box small-text">
                     <ul>
                         <li>Product Owner: Jorge Manriquez .</li>
@@ -245,6 +308,23 @@
             </section>
 
             <section>
+                <h2>4.4. Consideraciones Éticas</h2>
+                <div class="box small-text">
+                    <ul>
+                        <li><span class="success">Transparencia:</span> Los cálculos de stock y reportes financieros
+                            deben reflejar 100% la realidad del negocio, sin ocultar mermas.</li>
+                        <li><span class="success">Confidencialidad:</span> Compromiso absoluto de proteger la estrategia
+                            de precios y la base de datos de los clientes (B2B).</li>
+                        <li><span class="success">Inclusión Digital:</span> Diseño de una interfaz amigable que asegure
+                            que ningún operario quede excluido por tener menor experiencia tecnológica.</li>
+                        <li><span class="success">Uso Ético de la Información:</span> Evitar el uso de métricas de
+                            rendimiento para generar presiones laborales desleales, enfocándose en la eficiencia
+                            operativa.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
                 <h2>5. Propuesta de Herramientas (Backend y BD)</h2>
                 <div class="box small-text">
                     <div class="stack-item">
@@ -257,7 +337,7 @@
                     <div class="stack-item">
                         <strong>🟡 Node.js (Servidor API)</strong>
                         <p>- <em>Por qué:</em> Su arquitectura de carga de datos amplia permite una gestión del
-                            Inventario de forma efectiva.</p>
+                            Inventario de forma efectiva y rápida para conexiones remotas.</p>
                         <p>- <em>Cómo:</em> Actuará como el "cerebro" central (API REST) que recibe la información del
                             Inventario ingresada y la procesa.</p>
                     </div>
@@ -269,22 +349,22 @@
                 <div class="box small-text">
                     <div class="stack-item">
                         <strong>⚛️ React + TypeScript (Interfaz Web)</strong>
-                        <p>- <em>Por qué:</em> React genera fluidez y TS previene errores al obligar a tipar los datos
-                            entrantes estrictamente.</p>
+                        <p>- <em>Por qué:</em> React genera fluidez web, y TS previene errores silenciosos al obligar a
+                            tipar los datos
+                            entrantes estrictamente desde el navegador.</p>
                         <p>- <em>Cómo:</em> Se construirá un Dashboard (Panel Web) visual e intuitivo donde los gerentes
-                            visualizarán el inventario y los usuarios podrán registrar cambios.</p>
+                            visualizarán el inventario desde cualquier lugar.</p>
                     </div>
                     <div class="stack-item">
                         <strong>🧪 Selenium (QA Automations)</strong>
                         <p>- <em>Por qué:</em> Validar inventarios manualmente tras cada cambio es inviable y peligroso
-                            si se
-                            omite un bug.</p>
-                        <p>- <em>Cómo:</em> Se programarán scripts automáticos que simularán ser un trabajador revisando
-                            que el descuento de stock funcione a la perfección en cada módulo, evitando fallas en
-                            Producción.</p>
+                            de forma remota.</p>
+                        <p>- <em>Cómo:</em> Se programarán scripts automáticos que simularán interacciones, revisando
+                            que el descuento de stock funcione a la perfección en la nube.</p>
                     </div>
                 </div>
             </section>
+
 
             <section>
                 <h2>Fin de la Propuesta</h2>
